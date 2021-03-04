@@ -11,9 +11,9 @@ int main(int argc,char* argv[]){
  
  if((fpi=fopen("angle.in","r"))==NULL){puts("No angle.in");exit(1);}
  while(fscanf(fpi,"%s %lf",ax,&value)!=EOF){
-  if(!strcmp(ax,"x"))theta[0]=value;
-  else if(!strcmp(ax,"y"))theta[1]=value;
-  else if(!strcmp(ax,"z"))theta[2]=value;
+  if(!strcmp(ax,"x"))theta[0]=value*M_PI/180.0;
+  else if(!strcmp(ax,"y"))theta[1]=value*M_PI/180.0;
+  else if(!strcmp(ax,"z"))theta[2]=value*M_PI/180.0;
   else{printf("Err:What is %s ?\n",ax);exit(1);}
  }
  fclose(fpi);
