@@ -40,10 +40,6 @@ int main(int argc,char* argv[]){
    for(iatm=0;iatm<natm;iatm++)r[iatm*3+k]-=sum/natm;
   }
   
-  //fpo=fopen("debug.xyz","w");
-  //for(iatm=0;iatm<natm;iatm++)fprintf(fpo,"%s\t%8.3f\t%8.3f\t%8.3f\n",elem[iatm],r[iatm*3],r[iatm*3+1],r[iatm*3+2]);
-  //fclose(fpo);
-
   fpo=fopen("out.xyz","w");
   for(iatm=0;iatm<natm;iatm++){
    rr[iatm*3+1]=cos(theta[0])*r[iatm*3+1]-sin(theta[0])*r[iatm*3+2];
